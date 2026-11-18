@@ -1,0 +1,4 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';import {site} from '../data';
+---
+<MainLayout title="About" description="About Luminac21 and this engineering platform."><section class="wrap inner-page"><span class="eyebrow">ABOUT / PROFILE</span><h1>About <span>Luminac21.</span></h1><p class="lead">A personal profile for engineering work, technical research, and the process behind building software.</p><div class="content-panel"><span class="eyebrow">PROFILE</span><h2>{site.name} · Builder / Research</h2><p>{site.profile}</p></div><div class="content-panel"><span class="eyebrow">PRINCIPLES</span><h2>How this platform works</h2><ul><li>Publish only work and claims that can be supported.</li><li>Explain the context, limitations, and learning behind each project.</li><li>Keep research focused on authorized, responsible, and defensive use.</li><li>Prefer clear documentation over inflated metrics or empty labels.</li></ul></div></section></MainLayout>

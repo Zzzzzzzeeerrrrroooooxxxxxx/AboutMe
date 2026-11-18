@@ -1,0 +1,4 @@
+---
+const {number='01',title,category='ENGINEERING',description,status='IN DEVELOPMENT',href}=Astro.props;
+---
+<article class="project-card"><div class="project-card-top"><span>{number} / {category}</span><span class="status-pill">{status}</span></div><div class="project-art" aria-hidden="true"><span>{number}</span><i></i><b></b></div><h3>{title}</h3><p>{description}</p>{href&&<a class="card-link" href={href}>OPEN PROJECT <span>↗</span></a>}</article>

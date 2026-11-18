@@ -1,0 +1,7 @@
+---
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const links=[['HOME','/'],['ABOUT','/about/'],['PROJECTS','/projects/'],['RESEARCH','/research/'],['STACK','/stack/'],['ACTIVITY','/activity/'],['COLLECTIVE','/collective/']];
+const pathname=Astro.url.pathname.replace(import.meta.env.BASE_URL,'/')||'/';
+---
+<header class="site-header"><a class="brand" href={`${base}/`}><span class="brand-mark">L21</span><span class="brand-name">LUMINAC<span>21</span></span></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button><nav class="main-nav" aria-label="Main navigation">{links.map(([label,path])=><a class:list={{active:pathname===path}} href={`${base}${path}`}>{label}</a>)}</nav><a class="header-contact" href={`${base}/contact/`}>LET'S TALK <span>↗</span></a></header>
+<script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.main-nav');toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav?.classList.toggle('nav-open',!open);});</script>
